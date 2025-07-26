@@ -1,0 +1,223 @@
+/* Estilos generales */
+body {
+  background-color: #f5f5f5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header */
+.header {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+  color: white !important;
+}
+
+.header p {
+  font-size: 1.1rem;
+  color: white !important;
+  margin-bottom: 0;
+  opacity: 1 !important;
+}
+
+/* Clase específica de Bootstrap que puede estar interfiriendo */
+.header .text-muted {
+  color: white !important;
+}
+
+/* Cards y formularios */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+/* Formulario */
+.form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 8px;
+}
+
+.form-control {
+  border: 2px solid #e9ecef;
+  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #6c757d;
+  box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+}
+
+.form-control:hover {
+  border-color: #adb5bd;
+}
+
+/* Botón de envío */
+.submit-btn {
+  background: linear-gradient(135deg, #6c757d, #495057);
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #495057, #343a40);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Sección de comentarios */
+.comments-section h2 {
+  color: #495057;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+
+.comments-count {
+  font-size: 1rem;
+  padding: 8px 15px;
+  border-radius: 20px;
+}
+
+/* Tarjetas de comentarios */
+.comment-card {
+  transition: all 0.3s ease;
+  border-left: 4px solid #6c757d;
+}
+
+.comment-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.comment-header {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 10px;
+}
+
+.comment-author {
+  color: #495057;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.comment-content {
+  margin-top: 15px;
+}
+
+.comment-content p {
+  color: #6c757d;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Alertas personalizadas */
+.alert {
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-left: 4px solid #198754;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #721c24;
+  border-left: 4px solid #dc3545;
+}
+
+.alert-info {
+  background-color: #d1ecf1;
+  color: #055160;
+  border-left: 4px solid #0dcaf0;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+  
+  .header {
+      padding: 30px 15px;
+  }
+  
+  .header h1 {
+      font-size: 2rem;
+  }
+  
+  .card-body {
+      padding: 20px;
+  }
+  
+  .comment-card:hover {
+      transform: none;
+  }
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(30px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.comment-card {
+  animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Loading state */
+.submit-btn:disabled {
+  background: #adb5bd;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submit-btn:disabled:hover {
+  background: #adb5bd;
+  transform: none;
+  box-shadow: none;
+}
